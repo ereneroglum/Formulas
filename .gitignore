@@ -274,3 +274,9 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
+
+#Exclude PDF
+*.pdf
+
+#Exclude VSCode Snippets
+*.code-snippets
