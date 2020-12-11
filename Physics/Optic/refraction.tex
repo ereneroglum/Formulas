@@ -1,0 +1,52 @@
+\documentclass[./optik]{subfiles}
+\subsection{Kırılma}
+
+\subsubsection*{Kırıcılık İndisi}
+\begin{equation}
+     n = \frac{c}{V} \qquad \qquad \parbox{4cm}{\footnotesize$\begin{aligned}
+          n\text{: Ortamın Kırıcılık İndisi } \\
+          c\text{: Işık Hızı } \\
+          v\text{: Işığın Ortamda Hızı } (\frac{m}{s})
+\end{aligned}$}
+\end{equation}
+
+\begin{figure}[h!]
+     \centering
+     \begin{tikzpicture}
+          \tkzDefPoint(0,0){A}
+          \tkzDefPoint(8,0){B}
+          \tkzDrawSegment(A,B)
+          \tkzLabelPoint[above right](A){$n_1$}
+          \tkzLabelPoint[below right](A){$n_2$}
+          \tkzDefMidPoint(A,B) \tkzGetPoint{D}
+          \tkzDefPoint(4,3){E}
+          \tkzDefPoint(4,-3){F}
+          \tkzDrawSegment[dashed](E,F)
+          \tkzLabelPoint(E){N}
+          \tkzMarkRightAngle(E,D,B)
+          \tkzLabelAngle[pos=-0.15](E,D,B){$\cdot$}
+     
+          \tkzDefPoint(2,2.7){G}
+          \tkzDefPoint(6,-1){H}
+     
+          \begin{scope}[decoration={
+               markings,
+               mark=at position 0.5 with {\arrow{>}}}
+               ] 
+               \tkzDrawSegments[postaction={decorate}](G,D)
+               \tkzDrawSegments[postaction={decorate}](D,H)
+           \end{scope}
+     
+           \tkzMarkAngle[mark=none, size=0.4](E,D,G)
+           \tkzLabelAngle[pos=0.7](E,D,G){$\alpha$}
+           \tkzMarkAngle[mark=none, size=0.3](F,D,H)
+           \tkzLabelAngle[pos=0.7](F,D,H){$\beta$}
+     \end{tikzpicture}
+\end{figure}
+
+\subsubsection*{Snell Yasası}
+\begin{equation}
+    n_1 \sin{\alpha} = n_2 \sin{\beta} \qquad \qquad \parbox{4cm}{\footnotesize$\begin{aligned}
+          n_1\text{, }n_2\text{: Ortamın Kırıcılık İndisi }
+\end{aligned}$}
+\end{equation}

@@ -1,0 +1,52 @@
+\documentclass[./optic.tex]{subfiles}
+\subsection{Aydınlanma Şiddeti}
+
+\subsubsection*{Aydınlanma Şiddeti Formulü}
+\begin{equation}
+    E = \frac{\Phi}{A} \qquad \qquad \parbox{4cm}{\footnotesize$\begin{aligned}
+        E\text{: Aydınlanma Şiddeti (lx) } \\
+        \Phi\text{: Işık Akısı (lm) } \\
+        A\text{: Yüzey Alanı } (m^2)
+\end{aligned}$}
+\end{equation}
+
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+         \tkzDefPoint(0,0){A}
+         \tkzDefPoint(8,0){B}
+         \tkzDrawSegment(A,B)
+         \tkzDefMidPoint(A,B) \tkzGetPoint{E}
+         \tkzDefPoint(2,2.7){I}
+    
+        \begin{scope}[decoration={
+            markings,
+            mark=at position 0.5 with {\arrow{>}}}
+            ] 
+            \tkzDrawSegments[postaction={decorate}](I,E)
+        \end{scope}
+
+        \tkzDefPoint(4,4){N}
+        \tkzLabelPoints[above](I, N)
+        \tkzLabelPoints[below right](E)
+
+        \tkzMarkRightAngle(B,E,N)
+        \tkzLabelAngle[pos=0.15](B,E,N){$\cdot$}
+
+        \tkzLabelSegment[right](I,E){d}
+        \tkzDrawSegment[dashed](N,E)
+        \tkzMarkAngle[size=0.4, mark=none](N,E,I)
+        \tkzLabelAngle[pos=0.7](N,E,I){$\alpha$}
+
+
+    \end{tikzpicture}
+\end{figure}
+
+\subsubsection*{Noktaya Düşen Işınlar İçin Aydınlanma Şiddeti Formulü}
+\begin{equation}
+    E = \frac{I}{d^2} \cos{\alpha} \qquad \qquad \parbox{4cm}{\footnotesize$\begin{aligned}
+        E\text{: Aydınlanma Şiddeti (lx) } \\
+        I\text{: Işık Şiddeti (cd) } \\
+        d\text{: Mesafe (m) } 
+\end{aligned}$}
+\end{equation}

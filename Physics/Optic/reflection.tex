@@ -1,0 +1,39 @@
+\documentclass[./optik]{subfiles}
+\subsection{Yansıma}
+
+\begin{figure}[h!]
+     \centering
+     \begin{tikzpicture}
+          \tkzDefPoint(0,0){A}
+          \tkzDefPoint(8,0){B}
+          \tkzDrawSegment(A,B)
+          \tkzDefMidPoint(A,B) \tkzGetPoint{D}
+          \tkzDefPoint(4,3){E}
+          \tkzDrawSegment[dashed](E,D)
+          \tkzLabelPoint(E){N}
+          \tkzMarkRightAngle(E,D,B)
+          \tkzLabelAngle[pos=-0.15](E,D,B){$\cdot$}
+     
+          \tkzDefPoint(2,2.7){G}
+          \tkzDefPoint(6,2.7){H}
+     
+          \begin{scope}[decoration={
+               markings,
+               mark=at position 0.5 with {\arrow{>}}}
+               ] 
+               \tkzDrawSegments[postaction={decorate}](G,D)
+               \tkzDrawSegments[postaction={decorate}](D,H)
+           \end{scope}
+     
+           \tkzMarkAngle[mark=none, size=0.4](E,D,G)
+           \tkzLabelAngle[pos=0.7](E,D,G){$\alpha$}
+           \tkzMarkAngle[mark=none, size=0.4](H,D,E)
+           \tkzLabelAngle[pos=0.7](H,D,E){$\alpha$}
+     \end{tikzpicture}
+\end{figure}
+
+\subsubsection*{Yansımanın Temel Prensibi}
+
+\begin{theorem}
+    Işınların gelme açısı ile yansıma açısı birbirine eşittir.
+\end{theorem}
