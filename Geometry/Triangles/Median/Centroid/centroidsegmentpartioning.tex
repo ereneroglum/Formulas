@@ -1,0 +1,51 @@
+\documentclass[./centroid.tex]{subfiles}
+\subsubsection{Ağırlık Merkezinde Kenar Uzunlukları Parçalama}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(2,4){A}
+        \tkzDefPoint(0,0){B}
+        \tkzDefPoint(5,0){C}
+        \tkzDrawPolygon(A,B,C)
+        
+        \tkzDefTriangleCenter[centroid](A,B,C)
+        \tkzGetPoint{G}
+
+
+        \tkzDefMidPoint(B,C)
+        \tkzGetPoint{L}
+
+        \tkzDefMidPoint(A,B)
+        \tkzGetPoint{K}
+
+        \tkzDefMidPoint(A,C)
+        \tkzGetPoint{M}
+
+
+        \tkzDrawPoints(A,B,C,G)
+        \tkzDrawSegments(A,L B,M C,K)
+
+        \tkzLabelPoints[above](A)
+        \tkzLabelPoints[below left](B)
+        \tkzLabelPoints[below right](C)
+
+        \tkzLabelPoints[above right](G)
+        
+        \tkzLabelSegments[right](A,G){$2a$}
+        \tkzLabelSegments[right](G,L){$a$}
+
+        \tkzLabelSegments[above](C,G){$2c$}
+        \tkzLabelSegments[above](G,K){$c$}
+
+        \tkzLabelSegments[above](B,G){$2b$}
+        \tkzLabelSegments[above](G,M){$b$}
+
+
+    \end{tikzpicture}
+    \caption{Üçgen}
+    \label{fig:centroidsegmentation}
+\end{figure}
+
+\begin{equation}
+    \text{\ref{fig:centroidsegmentation} Üçgen figüründe de görülebileceği gibi G ağırlık merkezi ise G noktası kenarortayları} \frac{2}{1} \text{oranda böler.}
+\end{equation}

@@ -1,0 +1,54 @@
+\documentclass[../Isosceles.tex]{subfiles}
+\subsubsection{İkizkenar Üçgende Kenarlara Atılan Dikmeler}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(0,0){A}
+        \tkzDefPoint(6,0){C}
+        \tkzDefMidPoint(A,C) \tkzGetPoint{D}
+        \tkzDefLine[perpendicular=through D](A,C) \tkzGetPoint{K}
+        \tkzDefPointWith[linear,K=0.8](D,K) \tkzGetPoint{B}
+
+        \tkzDrawSegments(A,B B,C A,C)
+
+        \tkzDefPoint(2,0){F}
+
+        \tkzDefLine[perpendicular=through F](A,B) \tkzGetPoint{M}
+        \tkzInterLL(F,M)(A,B) \tkzGetPoint{N}
+
+        \tkzDrawSegment(F,N)
+        \tkzMarkRightAngle(F,N,B)
+        \tkzLabelAngle[pos=0.2](F,N,B){$\cdot$}
+
+        \tkzDefLine[perpendicular=through F](B,C) \tkzGetPoint{O}
+        \tkzInterLL(F,O)(B,C) \tkzGetPoint{P}
+
+        \tkzDrawSegment(F,P)
+        \tkzMarkRightAngle(B,P,F)
+        \tkzLabelAngle[pos=0.2](B,P,F){$\cdot$}
+
+        \tkzDrawPoints(A,B,C,F)
+        \tkzLabelPoints[above](B)
+        \tkzLabelPoints[above left](N)
+        \tkzLabelPoints[above right](P)
+        \tkzLabelPoints[below](A,F,C)
+        
+        \tkzMarkSegments[mark=||](B,A B,C)
+
+        \tkzDrawSegment(B,D)
+        \tkzMarkRightAngle(B,D,C)
+        \tkzLabelAngle[pos=-0.2](B,D,C){$\cdot$}
+
+        \tkzLabelSegment(B,D){$h$}
+
+
+    \end{tikzpicture}
+    \caption{İkizkenar Üçgen}
+    \label{fig:isoscelesperptosegm}
+\end{figure}
+
+\begin{equation}
+    \text{\ref{fig:isoscelesperptosegm} Üçgen figüründe de görülebileceği gibi, } \\
+    h = \lvert FN \rvert + \lvert FP \rvert \\
+    \text{ sağlanır. }
+\end{equation}

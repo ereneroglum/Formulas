@@ -1,0 +1,37 @@
+\documentclass[../Median.tex]{subfiles}
+\subsubsection{Kenar Ortay Teoremi}
+    
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(45:3){A}
+        \tkzDefPoint(0:0){B}
+        \tkzDefPoint(0:5){C}
+        \tkzDefMidPoint(B,C) \tkzGetPoint{K}
+        \tkzDrawPolygon(A,B,C)
+        \tkzDrawSegment(A,K)
+        \tkzLabelSegment(A,K){$V_a$}
+        \tkzDrawPoints(A,B,C,K)
+        \tkzLabelPoints(B,C,K)
+        \tkzLabelPoints[above](A)
+        
+        \tkzLabelSegments[above left](A,B){$c$}
+        \tkzLabelSegments[above right](A,C){$b$}
+        \tkzLabelSegments[below](B,C){$a$}
+    \end{tikzpicture}
+    \caption{Kenarortay}
+    \label{fig:median}
+\end{figure}
+
+
+\begin{equation}
+    \text{\ref{fig:median} Kenarortay figürü için } \\
+    2 V_a^2 = b^2 + c^2 - \frac{a^2}{2} \\
+    \text{ geçerlidir.} 
+\end{equation}
+
+\begin{equation}
+    \text{Bütün üçgenler için } \\
+    4(V_a^2 + V_b^2 + V_c^2) = 3(a^2 + b^2 + c^2) \\
+    \text{ geçerlidir.}
+\end{equation}

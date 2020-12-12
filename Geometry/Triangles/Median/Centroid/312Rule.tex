@@ -1,0 +1,55 @@
+\documentclass[../centroid.tex]{subfiles}
+\subsubsection{312 Kuralı}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(2,4){A}
+        \tkzDefPoint(0,0){B}
+        \tkzDefPoint(5,0){C}
+        \tkzDrawPolygon(A,B,C)
+        
+        \tkzDefTriangleCenter[centroid](A,B,C)
+        \tkzGetPoint{G}
+
+        \tkzDefMidPoint(A,B)
+        \tkzGetPoint{D}
+        \tkzMarkSegments[mark=|](A,D D,B)
+
+        \tkzDefMidPoint(B,C)
+        \tkzGetPoint{L}
+
+        \tkzDefMidPoint(A,C)
+        \tkzGetPoint{M}
+        \tkzMarkSegments[mark=||](A,M M,C)
+
+        \tkzDrawSegments(A,L)
+        \tkzDrawSegments(B,M)
+        \tkzDrawSegments(C,D)
+
+        \tkzLabelPoints[above](A)
+        \tkzLabelPoints[below left](B)
+        \tkzLabelPoints[below right](C)
+        \tkzLabelPoints[below right](G)
+
+        \tkzDrawSegment(D,M)
+
+        \tkzInterLL(A,L)(D,M)
+        \tkzGetPoint{K}
+
+        \tkzLabelSegments[right](A,K){$3k$}
+        \tkzLabelSegments[right](K,G){$k$}
+        \tkzLabelSegments[right](G,L){$2k$}
+
+        \tkzDrawPoints(A,B,C,G,K)
+        \tkzLabelPoints[above right](K)
+
+        \tkzMarkSegments[mark=o](D,K K,M)
+
+    \end{tikzpicture}
+    \caption{}
+    \label{fig:}
+\end{figure}
+
+\begin{equation}
+    \text{\ref{fig:centroidsegmentation} Üçgen figüründe de görülebileceği gibi orta taban ve ağırlık merkezi, kenarortayı 3:1:2 oranında böler.}
+\end{equation}

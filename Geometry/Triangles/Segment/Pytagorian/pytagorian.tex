@@ -1,0 +1,34 @@
+\documentclass[../Segment.tex]{subfiles}
+\subsubsection{Pisagor Teoremi}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(0,0){A}
+        \tkzDefPoint(0,5){B}
+        \tkzDefPoint(4,0){C}
+
+        \tkzDrawPolygon(A,B,C)
+
+        \tkzDrawPoints(A,B,C)
+
+        \tkzMarkRightAngle(C,A,B)
+        \tkzLabelAngle[pos=0.15](C,A,B){$\cdot$}
+
+        \tkzLabelPoints[below left](A)
+        \tkzLabelPoints[above](B)
+        \tkzLabelPoints[below right](C)
+
+        \tkzLabelSegments[left](A,B){c}
+        \tkzLabelSegments[right](B,C){a}
+        \tkzLabelSegments[below](A,C){b}
+
+    \end{tikzpicture}
+    \caption{Dik Üçgen}
+    \label{fig:pistrig}
+\end{figure}
+
+\begin{equation}
+    \text{\ref{fig:pistrig} Üçgen figüründe de görülebileceği gibi, }
+    a^2 = b^2 + c^2
+    \text{ geçerlidir.}
+\end{equation}

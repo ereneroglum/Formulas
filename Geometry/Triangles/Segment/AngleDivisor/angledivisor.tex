@@ -1,0 +1,32 @@
+\documentclass[../Segment.tex]{subfiles}
+\subsubsection{Kesen Açı Kenar İlişkisi}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(45:3){A}
+        \tkzDefPoint(0:0){B}
+        \tkzDefPoint(0:5){C}
+        \tkzDrawPolygon(A,B,C)
+        \tkzDefPoint(2,0){D}
+        \tkzDrawSegment(A,D)
+        \tkzDrawPoints(A,B,C,D)
+        \tkzLabelPoints(B,C,D)
+        \tkzLabelPoints[above](A)
+        \tkzLabelSegments[below](B,D){$a_1$}
+        \tkzLabelSegments[below](D,C){$a_2$}
+        \tkzLabelSegments[above left](A,B){$c$}
+        \tkzLabelSegments[above right](A,C){$b$}
+        \tkzMarkAngle[size=0.5cm, color=black, mark=none](B,A,D)
+        \tkzLabelAngle[pos=0.7](B,A,D){$\alpha$}
+        \tkzMarkAngle[size=0.5cm, color=black, mark=none](D,A,C)
+        \tkzLabelAngle[pos=0.7](D,A,C){$\beta$}
+    \end{tikzpicture}
+    \caption{Üçgen}
+    \label{fig:anglediv}
+\end{figure}
+
+\begin{equation}
+    \text{\ref{fig:anglediv} Üçgen figüründe de görülebileceği gibi, } \\
+    \frac{c}{a_1}\sin{\alpha} = \frac{b}{a_2}\sin{\beta} \\
+    \text{ geçerlidir.}
+\end{equation}

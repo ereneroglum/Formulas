@@ -1,0 +1,33 @@
+\documentclass[../Area.tex]{subfiles}
+\subsubsection{Kesenin Parçaladığı Alan}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(60:4){A}
+        \tkzDefPoint(0,0){B}
+        \tkzDefPoint(5,0){C}
+        \tkzDefPoint(3,0){D}
+
+        \tkzDrawPolygon(A,B,C)
+        \tkzDrawSegment(A,D)
+
+        \tkzLabelPoints[below left](B)
+        \tkzLabelPoints[above](A)
+        \tkzLabelPoints[below right](C)
+        \tkzLabelPoints[below](D)
+
+        \tkzDrawPoints(A,B,C,D)
+
+        \tkzLabelSegment[below](B,D){$k$}
+        \tkzLabelSegment[below](D,C){$l$}
+
+    \end{tikzpicture}
+    \caption{}
+    \label{fig:secareapartitioning}
+\end{figure}
+
+\begin{equation}
+    \text{\ref{fig:secareapartitioning} Üçgen figüründe de görülebileceği gibi, } \\
+    \frac{\text{Alan(ADB)}}{\text{Alan(ADC)}} = \frac{k}{l} \\
+    \text{ geçerlidir.}
+\end{equation}

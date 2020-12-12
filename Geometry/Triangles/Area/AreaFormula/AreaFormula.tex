@@ -1,0 +1,40 @@
+\documentclass[../Area.tex]{subfiles}
+\subsubsection{Üçgenin Alan Formulü}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(45:3){A}
+        \tkzDefPoint(0,0){B}
+        \tkzDefPoint(6,0){C}
+
+        \tkzDrawPolygon(A,B,C)
+        \tkzDrawPoints(A,B,C)
+        
+        \tkzLabelPoints[above](A)
+        \tkzLabelPoints[below left](B)
+        \tkzLabelPoints[below right](C)
+
+        \tkzDefLine[perpendicular=through A](B,C) \tkzGetPoint{K}
+        \tkzInterLL(A,K)(B,C) \tkzGetPoint{H}
+
+        \tkzDrawSegment(A,H)
+
+        \tkzMarkRightAngle[size=0.4](C,H,A)
+        \tkzLabelAngle[pos=0.25](C,H,A){$\cdot$}
+
+        \tkzLabelSegment[above left](A,B){c}
+        \tkzLabelSegment[above right](A,C){b}
+        \tkzLabelSegment[below](B,C){a}
+
+        \tkzLabelSegment[right](A,H){h}
+
+    \end{tikzpicture}
+    \caption{Üçgen}
+    \label{fig:trigwperpend}
+\end{figure}
+
+\begin{equation}
+    \text{\ref{fig:trigwperpend} Üçgen figüründe de görülebileceği gibi, } \\
+    Alan(ABC) = \frac{h*a}{2} \\
+    \text{ geçerlidir.}
+\end{equation}

@@ -1,0 +1,66 @@
+\documentclass[../Segment.tex]{subfiles}
+\subsubsection{Carnot Teoremi}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(60:4){A}
+        \tkzDefPoint(0,0){B}
+        \tkzDefPoint(4,0){C}
+        \tkzDefPoint(1.5,1){D}
+        
+        \tkzDefLine[orthogonal=through D](B,A)
+        \tkzGetPoint{K}
+        \tkzDefLine[orthogonal=through D](A,C)
+        \tkzGetPoint{L}
+        \tkzDefLine[orthogonal=through D](B,C)
+        \tkzGetPoint{M}
+
+        \tkzInterLL(A,B)(K,D)
+        \tkzGetPoint{E}
+        \tkzInterLL(A,C)(L,D)
+        \tkzGetPoint{F}
+        \tkzInterLL(B,C)(M,D)
+        \tkzGetPoint{G}
+
+        \tkzDrawSegment(D,E)
+        \tkzDrawSegment(D,F)
+        \tkzDrawSegment(D,G)
+
+        \tkzMarkRightAngle(D,E,A)
+        \tkzMarkRightAngle(C,F,D)
+        \tkzMarkRightAngle(D,G,B)
+
+
+        \tkzLabelPoints[above](A)
+        \tkzLabelPoints[below left](B)
+        \tkzLabelPoints[below right](C)
+        \tkzLabelPoints[above](D)
+        \tkzLabelPoints[above left](E)
+        \tkzLabelPoints[above right](F)
+        \tkzLabelPoints[below](G)
+
+        \tkzDrawPoints(A,B,C,D,E,F,G)
+
+        \tkzDrawPolygon(A,B,C)
+
+        \tkzLabelAngle[pos=0.17](D,E,A){$\cdot$}
+        \tkzLabelAngle[pos=-0.20](C,F,D){$\cdot$}
+        \tkzLabelAngle[pos=0.15](D,G,B){$\cdot$}
+
+        \tkzLabelSegment[below](B,G){$a_1$}
+        \tkzLabelSegment[below](G,C){$a_2$}
+        \tkzLabelSegment[above right](A,F){$b_2$}
+        \tkzLabelSegment[above right](F,C){$b_1$}
+        \tkzLabelSegment[above left](A,E){$c_1$}
+        \tkzLabelSegment[above left](E,B){$c_2$}
+
+    \end{tikzpicture}
+    \caption{Üçgen}
+    \label{fig:carntrig}
+\end{figure}
+
+\begin{equation}
+    \text{\ref{fig:carntrig} Üçgen figüründe görülebileceği gibi, } \\
+    a_1 ^2 + b_1 ^2 + c_1 ^2 = a_2 ^2 + b_2 ^2 + c_2 ^2 \\
+    \text{ geçerlidir.}
+\end{equation}

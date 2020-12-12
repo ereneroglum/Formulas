@@ -1,0 +1,26 @@
+\documentclass[../Area.tex]{subfiles}
+\subsubsection{Heron Teoremi}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(-2,-1){B}
+        \tkzDefPoint(0,2){A}
+        \tkzDefPoint(2,0){C}
+        \tkzLabelPoints[below left](B)
+        \tkzLabelPoints[right](C)
+        \tkzLabelPoints[above](A)
+        \tkzDrawPolygon(A,B,C)
+        \tkzLabelSegment[above left](A,B){c}
+        \tkzLabelSegment(C,B){a}
+        \tkzLabelSegment(A,C){b}
+    \end{tikzpicture}
+    \caption{Üçgen}
+    \label{fig:trig}
+\end{figure}
+
+\begin{equation}
+    \text{\ref{fig:trig} Üçgen figüründe de görülebileceği gibi, } \\
+    \text{Alan(ABC)} = \sqrt{u(u-a)(u-b)(u-c)} \qquad \qquad \parbox{4cm}{\footnotesize$\begin{aligned}
+        u = \frac{a+b+c}{2}
+    \end{aligned}$}
+\end{equation}

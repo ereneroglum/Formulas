@@ -1,0 +1,47 @@
+\documentclass[../Bisector.tex]{subfiles}
+\subsubsection{Açıortay Kollarına Atılan Dikme}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(5,4){B}
+        \tkzDefPoint(0,2){A}
+        \tkzDefPoint(5,0){C}
+
+        \tkzDefLine[bisector](B,A,C) \tkzGetPoint{F}
+        \tkzDefPointWith[linear,K=3](A,F) \tkzGetPoint{K}
+        \tkzDefLine[perpendicular=through K](A,B) \tkzGetPoint{L}
+        \tkzInterLL(K,L)(A,B) \tkzGetPoint{D}
+
+        \tkzDefLine[perpendicular=through K](A,C) \tkzGetPoint{M}
+        \tkzInterLL(K,M)(A,C) \tkzGetPoint{E}
+
+        \tkzDrawSegments(B,A A,C K,D K,E A,K)
+        \tkzDrawPoints(A,K,D,E)
+        \tkzLabelPoints[left](A)
+        \tkzLabelPoints[above left](D)
+        \tkzLabelPoints[below left](E)
+        \tkzLabelPoints[right](K)
+        
+        \tkzMarkAngle[size=0.5,mark=none](E,A,K)
+        \tkzMarkAngle[size=0.5,mark=none](K,A,D)
+
+        \tkzLabelAngle[pos=0.3](E,A,K){$\cdot$}
+        \tkzLabelAngle[pos=0.3](K,A,D){$\cdot$}
+
+        \tkzMarkSegments[mark=||](D,K K,E)
+        \tkzMarkSegments[mark=|](D,A A,E)
+
+        \tkzMarkRightAngle[size=0.3](A,D,K)
+        \tkzMarkRightAngle[size=0.3](A,E,K)
+        
+        \tkzLabelAngle[pos=0.2](A,D,K){$\cdot$}
+        \tkzLabelAngle[pos=-0.2](A,E,K){$\cdot$}
+
+    \end{tikzpicture}
+    \caption{Açıortay}
+    \label{fig:bisector}
+\end{figure}
+
+\begin{equation}
+    \text{\ref{fig:bisector} Açıortay figüründe de görülebileceği gibi açıortay ayaklarına atılan dikmelerin uzunlukları eşittir.}
+\end{equation}

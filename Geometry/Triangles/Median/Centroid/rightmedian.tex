@@ -1,0 +1,51 @@
+\documentclass[../centroid.tex]{subfiles}
+\subsubsection{Dik Kesişen Kenarortay Uzunlukları}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(2,4){A}
+        \tkzDefPoint(0,0){B}
+        \tkzDefPoint(3.5,0){C}
+        \tkzDrawPolygon(A,B,C)
+        
+        \tkzDefTriangleCenter[centroid](A,B,C)
+        \tkzGetPoint{G}
+
+        \tkzDefMidPoint(A,B)
+        \tkzGetPoint{K}
+
+        \tkzDefMidPoint(B,C)
+        \tkzGetPoint{L}
+        \tkzMarkSegments[mark=||](B,K K,A)
+
+        \tkzDefMidPoint(A,C)
+        \tkzGetPoint{M}
+        \tkzMarkSegments[mark=|](A,M M,C)
+
+        
+        \tkzDrawSegments(B,M C,K)
+
+        \tkzDrawPoints(A,B,C,G)
+
+        \tkzLabelPoints[above](A)
+        \tkzLabelPoints[below left](B)
+        \tkzLabelPoints[below right](C)
+        \tkzLabelPoints[above](G)
+
+        \tkzMarkRightAngle(B,G,C)
+        \tkzLabelAngle[pos=0.15](B,G,C){$\cdot$}
+
+        \tkzLabelSegments[left](B,A){c}
+        \tkzLabelSegments[right](C,A){b}
+        \tkzLabelSegments[below](B,C){a}
+    \end{tikzpicture}
+    \caption{Üçgen}
+    \label{fig:rightmed}
+\end{figure}
+
+\begin{equation}
+    \text{\ref{fig:rightmed} Üçgen figüründe de görülebileceği gibi, } \\
+    5a^2 = b^2 + c^2 \\
+    V_a^2 = V_b^2 + V_c^2 \\
+    \text{ geçerlidir.}
+\end{equation}

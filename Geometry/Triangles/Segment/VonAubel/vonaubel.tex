@@ -1,0 +1,94 @@
+\documentclass[../Segment.tex]{subfiles}
+\subsubsection{Von Aubel Teoremleri}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(0,0){A}
+        \tkzDefPoint(60:4){C}
+        \tkzDefPoint(4,0){B}
+        \tkzDefPoint(1.6,1.4){D}
+
+        \tkzInterLL(A,C)(B,D) \tkzGetPoint{E}
+        \tkzInterLL(C,B)(A,D) \tkzGetPoint{F}
+        \tkzInterLL(B,A)(C,D) \tkzGetPoint{G}
+
+        \tkzDrawSegment(B,E)
+        \tkzDrawSegment(A,F)
+        \tkzDrawSegment(C,G)
+
+        \tkzDrawPolygon(A,B,C)
+
+        \tkzDrawPoints(A,B,C,D,E,F,G)
+
+        \tkzLabelPoints[below left](A){}
+        \tkzLabelPoints[above](C)
+        \tkzLabelPoints[below right](B)
+        \tkzLabelPoints[right=0.2cm](D)
+        \tkzLabelPoints[above left](E)
+        \tkzLabelPoints[above right](F)
+        \tkzLabelPoints[below](G)
+
+        \tkzLabelSegment[above left](C,E){$b_1$}
+        \tkzLabelSegment[above left](E,A){$b_2$}
+        \tkzLabelSegment[above right](B,F){$a_2$}
+        \tkzLabelSegment[above right](F,C){$a_1$}
+        \tkzLabelSegment[right](C,D){$x_1$}
+        \tkzLabelSegment[right](D,G){$x_2$}
+
+    \end{tikzpicture}
+    \caption{Üçgen}
+    \label{fig:vonaubtrig}
+\end{figure}
+
+\begin{equation}
+    \text{\ref{fig:vonaubtrig} Üçgen figüründe de görülebileceği gibi, } \\
+    \frac{a_1}{a_2} + \frac{b_1}{b_2} = \frac{x_1}{x_2} \\
+    \text{ geçerlidir.}
+\end{equation}
+
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(0,0){A}
+        \tkzDefPoint(60:4){C}
+        \tkzDefPoint(4,0){B}
+        \tkzDefPoint(2.3,1){D}
+
+        \tkzInterLL(A,C)(B,D) \tkzGetPoint{E}
+        \tkzInterLL(C,B)(A,D) \tkzGetPoint{F}
+        \tkzInterLL(B,A)(C,D) \tkzGetPoint{G}
+
+        \tkzDrawSegment(B,E)
+        \tkzDrawSegment(A,F)
+        \tkzDrawSegment(C,G)
+
+        \tkzDrawPolygon(A,B,C)
+
+        \tkzDrawPoints(A,B,C,D,E,F,G)
+
+        \tkzLabelPoints[below left](A){}
+        \tkzLabelPoints[above](C)
+        \tkzLabelPoints[below right](B)
+        \tkzLabelPoints[right=0.2cm](D)
+        \tkzLabelPoints[above left](E)
+        \tkzLabelPoints[above right](F)
+        \tkzLabelPoints[below](G)
+
+        \tkzLabelSegment[above](B,D){$y_1$}
+        \tkzLabelSegment[above](D,E){$y_2$}
+        \tkzLabelSegment[above](A,D){$z_1$}
+        \tkzLabelSegment[above](D,F){$z_2$}
+        \tkzLabelSegment[right](C,D){$x_1$}
+        \tkzLabelSegment[right](D,G){$x_2$}
+
+    \end{tikzpicture}
+    \caption{Üçgen}
+    \label{fig:vonaubtrig2}
+\end{figure}
+
+\begin{equation}
+    \text{\ref{fig:vonaubtrig2} Üçgen figüründe de görülebileceği gibi, } \\
+    \frac{x_1}{x_1 + x_2} + \frac{y_1}{y_1 + y_2} + \frac{z_1}{z_1 + z_2} = 2 \\
+    \frac{x_2}{x_1 + x_2} + \frac{y_2}{y_1 + y_2} + \frac{z_2}{z_1 + z_2} = 1 \\
+    \text{ geçerlidir.}
+\end{equation}

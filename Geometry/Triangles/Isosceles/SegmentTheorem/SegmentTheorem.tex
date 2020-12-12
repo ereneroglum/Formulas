@@ -1,0 +1,36 @@
+\documentclass[../Isosceles.tex]{subfiles}
+\subsubsection{İkizkenar Üçgende Tepeden Çizilen Dikme}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(-2.5,0){B}
+        \tkzDefPoint(90:4){A}
+        \tkzDefPoint(2.5,0){C}
+        \tkzDrawPolygon(B,A,C)
+        \tkzDefMidPoint(B,C)\tkzGetPoint{K}
+        \tkzDrawSegment(A,K)
+        \tkzMarkRightAngle[size=0.45, draw=black](B,K,A)
+        \tkzLabelAngle[pos=-0.3](B,K,A){$\cdot$}
+        \tkzLabelPoints(C)
+        \tkzLabelPoints[below](K)
+        \tkzLabelPoints[above](A)
+        \tkzLabelPoints[below left](B)
+        \tkzMarkSegment[mark=||](B,K)
+        \tkzMarkSegment[mark=||](K,C)
+        
+        \tkzMarkSegment[mark=|](B,A)
+        \tkzMarkSegment[mark=|](C,A)
+
+        \tkzMarkAngle[size=0.5, mark=none](B,A,K)
+        \tkzMarkAngle[size=0.5, mark=none](K,A,C)
+
+        \tkzLabelAngle[pos=0.35](B,A,K){$\cdot$}
+        \tkzLabelAngle[pos=0.35](K,A,C){$\cdot$}
+    \end{tikzpicture}
+    \caption{İkizkenar Üçgen}
+    \label{fig:isosceles}
+\end{figure}
+
+\begin{equation}
+    \text{İkizkenar üçgende tepeden çizilen dikme; yükseklik, kenarortay ve açıortaydır.}
+\end{equation}

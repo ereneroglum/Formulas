@@ -1,0 +1,48 @@
+\documentclass[../Segment.tex]{subfiles}
+\subsubsection{Öklid Bağıntıları}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(0,0){A}
+        \tkzDefPoint(0,5){B}
+        \tkzDefPoint(4,0){C}
+
+        \tkzDefLine[orthogonal=through A](B,C)
+        \tkzGetPoint{K}
+        \tkzInterLL(A,K)(B,C)
+        \tkzGetPoint{D}
+
+        \tkzDrawPolygon(A,B,C)
+        \tkzDrawSegment(A,D)
+
+        \tkzDrawPoints(A,B,C,D)
+        \tkzMarkRightAngle(A,D,C)
+        \tkzLabelAngle[pos=0.15](A,D,C){$\cdot$}
+
+        \tkzMarkRightAngle(C,A,B)
+        \tkzLabelAngle[pos=0.15](C,A,B){$\cdot$}
+
+        \tkzLabelPoints[below left](A)
+        \tkzLabelPoints[above](B)
+        \tkzLabelPoints[below right](C)
+        \tkzLabelPoints[above right](D)
+
+        \tkzLabelSegments[left](A,B){c}
+        \tkzLabelSegments[right](B,D){p}
+        \tkzLabelSegments[right](D,C){k}
+        \tkzLabelSegments[below](A,C){b}
+        \tkzLabelSegments[below](A,D){h}
+
+    \end{tikzpicture}
+    \caption{Dik Üçgen}
+    \label{fig:euclidtrig}
+\end{figure}
+
+\begin{equation}
+    \text{\ref{fig:euclidtrig} Üçgen figüründe de görülebileceği gibi, }
+    h^2 = pk \\
+    b^2 = k (p+k) \\
+    c^2 = p (p+k) \\
+    \frac{1}{h^2}= \frac{1}{b^2} + \frac{1}{c^2} \\
+    \text{ geçerlidir.}
+\end{equation}

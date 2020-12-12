@@ -1,0 +1,45 @@
+\documentclass[./righttrigcent.tex]{subfiles}
+\subsubsection{Dik Üçgende Kenarortay}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(0,0){A}
+        \tkzDefPoint(0,3){B}
+        \tkzDefPoint(2.5,0){C}
+
+        \tkzDefTriangleCenter[centroid](A,B,C)
+        \tkzGetPoint{G}
+
+        \tkzDefMidPoint(B,C)
+        \tkzGetPoint{D}
+
+        \tkzDefMidPoint(A,C)
+        \tkzGetPoint{E}
+
+        \tkzDefMidPoint(A,B)
+        \tkzGetPoint{F}
+
+        \tkzDrawPolygon(A,B,C)
+        \tkzDrawSegment(A,D)
+        \tkzDrawSegment(B,E)
+        \tkzDrawSegment(C,F)
+
+        \tkzDrawPoints(A,B,C,D,G)
+
+        \tkzLabelPoints[below left](A)
+        \tkzLabelPoints[above](B)
+        \tkzLabelPoints[below right](C)
+        \tkzLabelPoints[above](G)
+
+        \tkzMarkRightAngle[size=0.3](B,A,C)
+        \tkzLabelAngle[pos=-0.2](B,A,C){$\cdot$}
+    \end{tikzpicture}
+    \caption{}
+    \label{fig:righttrigmedian}
+\end{figure}
+
+\begin{equation}
+    \text{\ref{fig:righttrigmedian} Üçgen figüründe de görülebileceği gibi G ağırlık merkezi ise,} \\
+    5V_a^2 = V_b^2 + V_c^2 \\
+    \text{ geçerlidir.}
+\end{equation}

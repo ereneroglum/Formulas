@@ -1,0 +1,32 @@
+\documentclass[../Segment.tex]{subfiles}
+\subsubsection{Kosinüs Teoremi}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(0,0){B}
+        \tkzDefPoint(45:4){A}
+        \tkzDefPoint(7,0){C}
+
+        \tkzDrawPolygon(B,A,C)
+        \tkzMarkAngle[size=0.3, mark=none](B,A,C)
+        \tkzLabelAngle[pos=0.5](B,A,C){$\alpha$}
+        
+        \tkzDrawPoints(B,A,C)
+        \tkzLabelPoints[below left](B)
+        \tkzLabelPoints[above](A)
+        \tkzLabelPoints[below right](C)
+
+        \tkzLabelSegment[below](B,C){$a$}
+        \tkzLabelSegment[above right](A,C){$b$}
+        \tkzLabelSegment[above left](A,B){$c$}
+
+    \end{tikzpicture}
+    \caption{Üçgen}
+    \label{fig:costrig}
+\end{figure}
+
+\begin{equation}
+    \text{\ref{fig:costrig} Üçgen figüründe de görülebileceği gibi, } \\
+    a^2 = b^2 + c^2 - 2bc\cos{\alpha} \\
+    \text{ geçerlidir.}
+\end{equation}

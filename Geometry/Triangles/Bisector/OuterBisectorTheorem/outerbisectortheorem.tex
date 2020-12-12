@@ -1,0 +1,55 @@
+\documentclass[../Bisector.tex]{subfiles}
+\subsubsection{Dış Açıortay Teoremi}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(40:5){H}
+        \tkzDefPoint(40:4){A}
+        \tkzDefPoint(0,0){B}
+        \tkzDefPoint(3.5,0){C}
+        \tkzDefLine[bisector](C,A,H)
+        \tkzGetPoint{K}
+        \tkzInterLL(B,C)(A,K)
+        \tkzGetPoint{N}
+
+        \tkzDrawPoints(A,B,C,N)
+        \tkzDrawPolygon(A,B,C)
+        \tkzDrawSegment(A,H)
+        \tkzDrawSegment(A,N)
+        \tkzDrawSegment(B,N)
+
+        \tkzMarkAngle[size=0.5, mark=none](C,A,N)
+        \tkzMarkAngle[size=0.5, mark=none](N,A,H)
+        
+        \tkzLabelAngle[pos=0.3](C,A,N){$\cdot$}
+        \tkzLabelAngle[pos=0.3](N,A,H){$\cdot$}
+
+        \tkzLabelPoints[below](C,N)
+        \tkzLabelPoints[above left](A)
+        \tkzLabelPoints[below left](B)
+
+        \tkzLabelSegment[left](A,B){c}
+        \tkzLabelSegment[left](A,C){b}
+
+        \tkzLabelSegment[below](B,C){k}
+        \tkzLabelSegment[below](C,N){p}
+        
+        \tkzLabelSegment[above right](A,N){$n_a$}
+
+
+    \end{tikzpicture}
+    \caption{Dış Açıortay}
+    \label{fig:outerbisectrig}
+\end{figure}
+
+\begin{equation}
+    \text{\ref{fig:bisect} Dış açıortay figüründe de görülebileceği gibi, } \\
+    \frac{p}{p+k}=\frac{b}{c} \\
+    \text{ geçelidir.}
+\end{equation}
+
+\begin{equation}
+    \text{\ref{fig:bisect} Dış açıortay figüründe de görülebileceği gibi, } \\
+    n_a ^2 = p(p+k) - bc \\  
+    \text{ geçelidir.}
+\end{equation}

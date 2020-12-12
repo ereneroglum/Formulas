@@ -1,0 +1,34 @@
+\documentclass[../Segment.tex]{subfiles}
+\subsubsection{Melenaus Teoremi}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(0,0){A}
+        \tkzDefPoint(60:3){B}
+        \tkzDefPoint(2,0){C}
+        \tkzDefPoint(5,0){D}
+        \tkzDefMidPoint(B,C) \tkzGetPoint{E}
+        \tkzDrawPolygon(A,B,C)
+        \tkzDrawPolygon(C,D,E)
+        \tkzInterLL(A,B)(D,E) \tkzGetPoint{F}
+        \tkzDrawSegment(E,F)
+        \tkzDrawPoints(A,B,C,D,E,F)
+
+        \tkzLabelPoints[below left](A)
+        \tkzLabelPoints[above](B)
+        \tkzLabelPoints[below right](C)
+        \tkzLabelPoints[below right](D)
+        \tkzLabelPoints[above right](E)
+        \tkzLabelPoints[above left](F)
+        
+    \end{tikzpicture}
+    \caption{Üçgen}
+    \label{fig:meltrig}
+\end{figure}
+
+\begin{equation}
+    \text{\ref{fig:meltrig} Üçgen figüründe görülebileceği gibi, } \\
+    \frac{\lvert CD \rvert}{\lvert AD \rvert} \frac{\lvert AF \rvert}{\lvert FB \rvert} \frac{\lvert BE \rvert}{\lvert EC \rvert} = 1 \\
+    \frac{\lvert BF \rvert}{\lvert BA \rvert} \frac{\lvert AC \rvert}{\lvert CD \rvert} \frac{\lvert DE \rvert}{\lvert EF \rvert} = 1 \\
+    \text{ geçerlidir.}
+\end{equation}

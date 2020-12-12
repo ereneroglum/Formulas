@@ -1,0 +1,47 @@
+\documentclass[../Segment.tex]{subfiles}
+\subsubsection{Ceva Teoremi}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(0,0){A}
+        \tkzDefPoint(60:4){B}
+        \tkzDefPoint(4,0){C}
+        \tkzDefPoint(1.6,1.4){D}
+
+        \tkzInterLL(A,B)(C,D) \tkzGetPoint{E}
+        \tkzInterLL(B,C)(A,D) \tkzGetPoint{F}
+        \tkzInterLL(C,A)(B,D) \tkzGetPoint{G}
+
+        \tkzDrawSegment(C,E)
+        \tkzDrawSegment(A,F)
+        \tkzDrawSegment(B,G)
+
+        \tkzDrawPolygon(A,B,C)
+
+        \tkzDrawPoints(A,B,C,D,E,F,G)
+
+        \tkzLabelPoints[below left](A){}
+        \tkzLabelPoints[above](B)
+        \tkzLabelPoints[below right](C)
+        \tkzLabelPoints[right=0.2cm](D)
+        \tkzLabelPoints[above left](E)
+        \tkzLabelPoints[above right](F)
+        \tkzLabelPoints[below](G)
+
+        \tkzLabelSegment[below](A,G){$b_2$}
+        \tkzLabelSegment[below](G,C){$b_1$}
+        \tkzLabelSegment[above left](B,E){$c_2$}
+        \tkzLabelSegment[above left](E,A){$c_1$}
+        \tkzLabelSegment[above right](C,F){$a_2$}
+        \tkzLabelSegment[above right](F,B){$a_1$}
+
+    \end{tikzpicture}
+    \caption{Üçgen}
+    \label{fig:cevatrig}
+\end{figure}
+
+\begin{equation}
+    \text{\ref{fig:cevatrig} Üçgen figüründe de görülebileceği gibi, }
+    \frac{a_1}{a_2} \frac{b_1}{b_2} \frac{c_1}{c_2} = 1 \\
+    \text{ geçerlidir.}
+\end{equation}

@@ -1,0 +1,36 @@
+\documentclass[../Segment.tex]{subfiles}
+\subsubsection{Stewart Teoremi}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(60:4){A}
+        \tkzDefPoint(0,0){B}
+        \tkzDefPoint(5,0){C}
+        \tkzDefPoint(3,0){D}
+
+        \tkzDrawPolygon(A,B,C)
+        \tkzDrawSegment(A,D)
+
+        \tkzLabelPoints[below left](B)
+        \tkzLabelPoints[above](A)
+        \tkzLabelPoints[below right](C)
+        \tkzLabelPoints[below](D)
+
+        \tkzDrawPoints(A,B,C,D)
+
+        \tkzLabelSegment[above left](A,B){c}
+        \tkzLabelSegment[above right](A,C){b}
+        \tkzLabelSegment[right](A,D){x}
+        \tkzLabelSegment[below](B,D){m}
+        \tkzLabelSegment[below](D,C){n}
+
+    \end{tikzpicture}
+    \caption{Üçgen}
+    \label{fig:stewtrig}
+\end{figure}
+
+\begin{equation}
+    \text{\ref{fig:stewtrig} Üçgen figüründe de görülebileceği gibi,} \\
+    x^2 = \frac{b^2 m + c^2 n}{m+n} - mn \\
+    \text{ geçerlidir.}
+\end{equation}

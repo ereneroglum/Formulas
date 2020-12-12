@@ -1,0 +1,43 @@
+\documentclass[../Median.tex]{subfiles}
+\subsubsection{Ağırlık Merkezi}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(2,4){A}
+        \tkzDefPoint(0,0){B}
+        \tkzDefPoint(5,0){C}
+        \tkzDrawPolygon(A,B,C)
+        
+        \tkzDefTriangleCenter[centroid](A,B,C)
+        \tkzGetPoint{G}
+
+        \tkzDefMidPoint(A,B)
+        \tkzGetPoint{K}
+        \tkzMarkSegments[mark=|](A,K K,B)
+
+        \tkzDefMidPoint(B,C)
+        \tkzGetPoint{L}
+        \tkzMarkSegments[mark=||](B,L L,C)
+
+        \tkzDefMidPoint(A,C)
+        \tkzGetPoint{M}
+        \tkzMarkSegments[mark=s](A,M M,C)
+
+        
+        \tkzDrawSegments(A,L B,M C,K)
+
+        \tkzDrawPoints(A,B,C,G)
+
+        \tkzLabelPoints[above](A)
+        \tkzLabelPoints[below left](B)
+        \tkzLabelPoints[below right](C)
+
+        \tkzLabelPoints[above right](G)
+    \end{tikzpicture}
+    \caption{Üçgen}
+    \label{fig:centeromasstrig}
+\end{figure}
+
+\begin{equation}
+    \text{\ref{fig:centeromasstrig} Üçgen figüründe de görülebileceği gibi kenarortaylar ağırlık merkezinde kesişir.}
+\end{equation}

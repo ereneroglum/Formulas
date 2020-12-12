@@ -1,0 +1,41 @@
+\documentclass[../Bisector.tex]{subfiles}
+\subsubsection{İç Açıortay Teoremi}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(45:3){A}
+        \tkzDefPoint(0:0){B}
+        \tkzDefPoint(0:5){C}
+        \tkzDrawPolygon(A,B,C)
+        \tkzDefLine[bisector](B,A,C) \tkzGetPoint{K}
+        \tkzInterLL(A,K)(B,C)
+        \tkzGetPoint{D}
+        \tkzDrawSegment(A,D)
+        \tkzDrawPoints(A,B,C,D)
+        \tkzLabelPoints(B,C,D)
+        \tkzLabelPoints[above](A)
+        \tkzLabelSegments[below](B,D){$a_1$}
+        \tkzLabelSegments[below](D,C){$a_2$}
+        \tkzLabelSegments[above left](A,B){$c$}
+        \tkzLabelSegments[above right](A,C){$b$}
+        \tkzMarkAngle[size=0.5cm, color=black, mark=none](B,A,D)
+        \tkzLabelAngle[pos=0.3](B,A,K){$\cdot$}
+        \tkzMarkAngle[size=0.5cm, color=black, mark=none](D,A,C)
+        \tkzLabelAngle[pos=0.3](D,A,C){$\cdot$}
+        \tkzLabelSegments[left](A,D){$n_a$}
+    \end{tikzpicture}
+    \caption{İç Açıortay}
+    \label{fig:bisect}
+\end{figure}
+
+\begin{equation}
+    \text{\ref{fig:bisect} İç açıortay figüründe de görülebileceği gibi, }
+    \frac{b}{a_1}=\frac{c}{a_2} \\
+    \text{ geçerlidir.}
+\end{equation}
+
+\begin{equation}
+    \text{\ref{fig:bisect} İç açıortay figüründe de görülebileceği gibi, }
+    n_a^2=bc-a_1 a_2 \\
+    \text{ geçerlidir.}
+\end{equation}
