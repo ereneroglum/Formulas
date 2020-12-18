@@ -1,0 +1,43 @@
+ 
+\documentclass[../segment.tex]{subfiles}
+\subsubsection{Steiner Teoremi}
+\begin{figure}[h!]
+	\centering
+	\begin{tikzpicture}
+		\tkzDefPoint(30:4){A}
+		\tkzDefPoint(0,0){B}
+		\tkzDefPoint(8,0){C}
+		\tkzDefPoint(2,0){D}
+		\tkzDefPoint(5,0){E}
+		
+		\tkzDrawPolygon(A,B,C)
+		
+		\tkzDrawPoints(A,B,C,D,E)
+		\tkzDrawSegment(A,D)
+		\tkzDrawSegment(A,E)
+		
+		\tkzLabelSegment[above left](A,B){c}
+		\tkzLabelSegment[above right](A,C){b}
+		\tkzLabelSegment[below](B,D){m}
+		\tkzLabelSegment[below](D,E){p}
+		\tkzLabelSegment[below](E,C){n}
+		
+		\tkzMarkAngle[mark=|](B,A,D)
+		\tkzMarkAngle[mark=|](E,A,C)
+		
+		\tkzLabelPoints[above](A)
+		\tkzLabelPoints[below left](B)
+		\tkzLabelPoints[below right](C)
+		\tkzLabelPoints[below](D)
+		\tkzLabelPoints[below](E)
+		
+	\end{tikzpicture}
+	\caption{Üçgen}
+	\label{fig:steiner}
+\end{figure}
+
+\ref{fig:steiner} Üçgen figüründe de görülebileceği gibi
+\begin{equation}
+	\frac{c^2}{b^2} = \frac{m}{p+n}\frac{m+p}{n}
+\end{equation}
+
