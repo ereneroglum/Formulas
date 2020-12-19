@@ -1,0 +1,29 @@
+\documentclass[../Area.tex]{subfiles}
+\subsubsection{Eşkenar Üçgenin Alan Formulü}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(0,0){A}
+        \tkzDefPoint(5,0){B}
+        \tkzDefPoint(60:5){C}
+
+        \tkzDrawPoints(A,B,C)
+        \tkzDrawPolygon(A,B,C)
+        \tkzLabelSegments[below](A,B){$a$}
+        \tkzLabelSegments[above left](A,C){$a$}
+        \tkzLabelSegments[above right](B,C){$a$}
+        
+        \tkzMarkSegments[mark=||](A,B B,C A,C)
+        \tkzLabelPoints[above](C)
+        \tkzLabelPoints[below right](B)
+        \tkzLabelPoints[below left](A)
+    \end{tikzpicture}
+    \caption{Eşkenar Üçgen}
+    \label{fig:equilatforarea}
+\end{figure}
+
+\ref{fig:equilatforarea} Üçgen figüründede görülebileceği gibi,
+\begin{equation}
+    \text{Alan(ABC)} = \frac{a^2 \sqrt{3}}{4}
+\end{equation} 
+geçerlidir.
