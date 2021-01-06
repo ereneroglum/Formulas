@@ -280,3 +280,6 @@ TSWLatexianTemp*
 
 #Exclude VSCode Snippets
 *.code-snippets
+
+#Exclude TODO
+TODO/
