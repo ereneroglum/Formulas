@@ -1,0 +1,45 @@
+\documentclass[../Similarity.tex]{subfiles}
+\subsubsection{Temel Orantı Teoremi}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(75:6){A}
+        \tkzDefPoint(0,0){B}
+        \tkzDefPoint(6,0){C}
+        \tkzDefMidPoint(B,A) \tkzGetPoint{D}
+        \tkzDefMidPoint(C,A) \tkzGetPoint{E}
+
+        \tkzLabelSegments[left=0.15cm](A,D){$a$}
+        \tkzLabelSegments[left=0.15cm](D,B){$b$}
+        \tkzLabelSegments[right=0.15cm](A,E){$c$}
+        \tkzLabelSegments[right=0.15cm](E,C){$d$}
+        \tkzLabelSegments[above](D,E){$e$}
+        \tkzLabelSegments[above](B,C){$f$}
+        
+        \begin{scope}[decoration={
+            markings,
+            mark=at position 0.5 with {\arrow{stealth}}}
+            ] 
+            \tkzDrawSegments[postaction={decorate}](D,E)
+            \tkzDrawSegments[postaction={decorate}](B,C)
+        \end{scope}
+
+        \tkzDrawPoints(A,B,C,D,E)
+        \tkzDrawSegments(A,B)
+        \tkzDrawSegments(A,C)
+        \tkzLabelPoints[left](D,B)
+        \tkzLabelPoints[right](C,E)
+        \tkzLabelPoints[above](A)
+    \end{tikzpicture}
+    \caption{Temel Orantı Teoremi}
+    \label{fig:ert}
+\end{figure}
+
+\ref{fig:ert} Üçgen figüründe de görülebileceği gibi,
+\begin{equation}
+    \begin{aligned}
+        \frac{a}{a+b} = \frac{c}{c+d} = \frac{e}{f} \\
+        \frac{a}{b} = \frac{c}{d}
+    \end{aligned}
+\end{equation}
+sağlanır.

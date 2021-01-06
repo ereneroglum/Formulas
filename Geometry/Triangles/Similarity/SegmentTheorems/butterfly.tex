@@ -1,0 +1,53 @@
+\documentclass[../Similarity.tex]{subfiles}
+\subsubsection{Kelebek Benzerliği}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(0,6){A}
+        \tkzDefPoint(6,6){B}
+        \tkzDefPoint(2,0){D}
+        \tkzDefPoint(8,0){E}
+        \tkzInterLL(A,E)(B,D) \tkzGetPoint{C}
+
+        \tkzDrawPolygon(A,B,C)
+        \tkzDrawPolygon(D,E,C)
+        
+        \begin{scope}[decoration={
+            markings,
+            mark=at position 0.5 with {\arrow{stealth}}}
+            ] 
+            \tkzDrawSegments[postaction={decorate}](A,B)
+            \tkzDrawSegments[postaction={decorate}](D,E)
+        \end{scope}
+
+        \tkzDrawPoints(A,B,C,D,E)
+
+        \tkzLabelPoints[above left](A)
+        \tkzLabelPoints[above right](B)
+        \tkzLabelPoints[right=0.15](C)
+        \tkzLabelPoints[below left](D)
+        \tkzLabelPoints[below right](E)
+
+        \tkzLabelSegments[above](A,B){$a$}
+        \tkzLabelSegments[below](D,E){$d$}
+        \tkzLabelSegments[below left](A,C){$b$}
+        \tkzLabelSegments[below right](B,C){$c$}
+        \tkzLabelSegments[above left](C,D){$f$}
+        \tkzLabelSegments[above right](C,E){$e$}
+
+        \tkzMarkAngles[mark=none, size=0.3cm, arc=ll](B,C,A D,C,E)
+        \tkzMarkAngles[size=0.3cm](A,B,C E,D,C)
+        \tkzMarkAngles[mark=none, size=0.4cm](C,A,B C,E,D)
+        \tkzLabelAngles[pos=0.25](C,A,B C,E,D){$\cdot$}
+    \end{tikzpicture}
+    \caption{Temel Orantı Teoremi}
+    \label{fig:ert}
+\end{figure}
+
+\ref{fig:ert} Figüründe de görülebileceği gibi,
+\begin{equation}
+    \begin{aligned}
+        \frac{a}{d} = \frac{b}{e} = \frac{c}{f} \\
+    \end{aligned}
+\end{equation}
+sağlanır.

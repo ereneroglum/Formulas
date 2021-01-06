@@ -1,0 +1,60 @@
+\documentclass[../Similarity.tex]{subfiles}
+\subsubsection{Thales Teoremi}
+
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(2,7){O}
+        \tkzDefPoint(4,7){P}
+        \tkzDefPoint(1,1){J}
+        \tkzDefPoint(5,1){V}
+
+        \tkzDefPoint(0,6){A}
+        \tkzDefPoint(6,6){D}
+        \tkzDefPoint(0,4){B}
+        \tkzDefPoint(6,4){E}
+        \tkzDefPoint(0,2){C}
+        \tkzDefPoint(6,2){F}
+
+        \tkzDrawSegments(O,J P,V)
+
+        \begin{scope}[decoration={
+            markings,
+            mark=at position 0.5 with {\arrow{stealth}}}
+            ] 
+            \tkzDrawSegments[postaction={decorate}](A,D)
+            \tkzDrawSegments[postaction={decorate}](B,E)
+            \tkzDrawSegments[postaction={decorate}](C,F)
+        \end{scope}
+
+        \tkzLabelPoints[left](A,B,C)
+        \tkzLabelPoints[right](D,E,F)
+        %\tkzLabelPoints(O,P,J,V)
+
+        \tkzInterLL(O,J)(A,D) \tkzGetPoint{OA}
+        \tkzInterLL(O,J)(B,E) \tkzGetPoint{OB}
+        \tkzInterLL(O,J)(C,F) \tkzGetPoint{OC}
+        
+        \tkzInterLL(P,V)(A,D) \tkzGetPoint{PA}
+        \tkzInterLL(P,V)(B,E) \tkzGetPoint{PB}
+        \tkzInterLL(P,V)(C,F) \tkzGetPoint{PC}
+
+        %\tkzLabelPoints(OA, OB, OC, PA, PB, PC)
+
+        \tkzLabelSegments[left=0.15cm](OA,OB){$a$}
+        \tkzLabelSegments[left=0.15cm](OB,OC){$b$}
+        \tkzLabelSegments[right=0.15cm](PA,PB){$c$}
+        \tkzLabelSegments[right=0.15cm](PB,PC){$d$}
+    \end{tikzpicture}
+    \caption{Thales Teoremi}
+    \label{fig:thales}
+\end{figure}
+
+\ref{fig:thales} Figüründede görülebileceği gibi,
+\begin{equation}
+    \begin{aligned}
+        \frac{a}{b} = \frac{c}{d} \\
+        \frac{a}{c} = \frac{b}{d}
+    \end{aligned}
+\end{equation}
+sağlanır.
