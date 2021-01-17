@@ -1,24 +1,26 @@
 \documentclass[a4paper, 10pt]{report}
 \usepackage[top=3cm, bottom=3cm, left=2cm, right=2cm]{geometry}
+
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
 \lhead{\thepage}
 
 \usepackage[turkish]{babel}
-\usepackage{tikz}
-\usepackage{tkz-euclide}
+
+\usepackage{tikz, tkz-euclide}
 \usetikzlibrary{arrows, calc,intersections, decorations.pathmorphing, decorations.markings}
-\usepackage{subfiles}
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{array}
-\usepackage{multirow}
-\usepackage{multicol}
+
+\usepackage{import}
+
+\usepackage{amsmath, amsthm}
+\usepackage{array, multirow, multicol}
+
 \usepackage{hyperref}
 \hypersetup{
     linktoc = all,
 }
+
 \author{Eren Eroğlu}
 \date{\today}
 \title{Formüller}
@@ -32,9 +34,9 @@
     \newtheorem*{definition}{Tanım}
     \maketitle
     \tableofcontents
-    \subfile{./Geometry/Geometry.tex}
-    \subfile{./Physics/physics.tex}
-    \subfile{./Chemistry/chemistry.tex}
-    \subfile{./Systems/si.tex}
-    \subfile{./Systems/constants.tex}
+    \import{./Geometry/}{Geometry.tex}
+    \import{./Physics/}{physics.tex}
+    \import{./Chemistry/}{chemistry.tex}
+    \import{./Systems/}{si.tex}
+    \import{./Systems/}{constants.tex}
 \end{document}
