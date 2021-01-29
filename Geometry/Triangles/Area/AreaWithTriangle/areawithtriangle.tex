@@ -1,0 +1,48 @@
+\subsubsection{Üçgen İçinde Üçgenin Parçaladığı Alan}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(60:4){A}
+        \tkzDefPoint(0,0){B}
+        \tkzDefPoint(5,0){C}
+
+        \tkzDefPointOnLine[pos=0.45](A,B)
+        \tkzGetPoint{D}
+        \tkzDefPointOnLine[pos=0.65](A,C)
+        \tkzGetPoint{E}
+        \tkzDefPointOnLine[pos=0.25](B,C)
+        \tkzGetPoint{F}
+        \tkzDrawPolygon(A,B,C)
+
+        \tkzLabelPoints[below left](B)
+        \tkzLabelPoints[above](A)
+        \tkzLabelPoints[below right](C)
+        \tkzLabelPoints[left](D)
+        \tkzLabelPoints[right](E)
+        \tkzLabelPoints[below](F)
+
+        \tkzDrawPoints(A,B,C,D,E,F)
+        
+        \tkzDrawPolygon(D,E,F)
+
+        \tkzLabelSegment[above left](A,D){$a_1$}
+        \tkzLabelSegment[above left](D,B){$a_2$}
+
+        \tkzLabelSegment[above right](A,E){$c_2$}
+        \tkzLabelSegment[above right](E,C){$c_1$}
+
+        \tkzLabelSegment[below](B,F){$b_1$}
+        \tkzLabelSegment[below](F,C){$b_2$}
+
+    \end{tikzpicture}
+    \caption{}
+    \label{fig:triangleareapartitioning}
+\end{figure}
+
+\ref{fig:triangleareapartitioning} Üçgen figüründe de görülebileceği gibi, 
+\begin{equation}
+    \begin{aligned}
+    \frac{\text{Alan(DEF)}}{\text{Alan(ABC)}} = \frac{a_1 b_1 c_1 + a_2 b_2 c_2}{(a_1 + a_2)(b_1 + b_2)(c_1 + c_2)} \\
+    \end{aligned}
+\end{equation}
+geçerlidir.

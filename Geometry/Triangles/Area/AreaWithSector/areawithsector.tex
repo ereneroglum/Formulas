@@ -1,0 +1,42 @@
+\subsubsection{Doğru Parçasının Parçaladığı Alan}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(60:4){A}
+        \tkzDefPoint(0,0){B}
+        \tkzDefPoint(5,0){C}
+
+        \tkzDefPointOnLine[pos=0.55](A,B)
+        \tkzGetPoint{D}
+        \tkzDefPointOnLine[pos=0.35](A,C)
+        \tkzGetPoint{E}
+        \tkzDrawPolygon(A,B,C)
+
+        \tkzLabelPoints[below left](B)
+        \tkzLabelPoints[above](A)
+        \tkzLabelPoints[below right](C)
+        \tkzLabelPoints[left](D)
+        \tkzLabelPoints[right](E)
+
+        \tkzDrawPoints(A,B,C,D,E)
+        
+        \tkzDrawSegment(E,D)
+
+        \tkzLabelSegment[above left](A,D){$a$}
+        \tkzLabelSegment[above left](D,B){$b$}
+
+        \tkzLabelSegment[above right](A,E){$c$}
+        \tkzLabelSegment[above right](E,C){$d$}
+
+    \end{tikzpicture}
+    \caption{}
+    \label{fig:sectorareapartitioning}
+\end{figure}
+
+\ref{fig:sectorareapartitioning} Üçgen figüründe de görülebileceği gibi, 
+\begin{equation}
+    \begin{aligned}
+    \frac{\text{Alan(ADE)}}{\text{Alan(ABC)}} = \frac{a}{a+b} \frac{c}{c+d} \\
+    \end{aligned}
+\end{equation}
+geçerlidir.
