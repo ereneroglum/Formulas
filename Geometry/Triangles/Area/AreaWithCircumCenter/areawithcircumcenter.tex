@@ -1,0 +1,35 @@
+\subsubsection{Çevrel Çember ile Alan}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(-4,-1){B}
+        \tkzDefPoint(0,4){A}
+        \tkzDefPoint(2,0){C}
+        \tkzLabelPoints[below left](B)
+        \tkzLabelPoints[right](C)
+        \tkzLabelPoints[above](A)
+        \tkzDrawPolygon(A,B,C)
+        \tkzLabelSegment[above left](A,B){c}
+        \tkzLabelSegment(C,B){a}
+        \tkzLabelSegment(A,C){b}
+
+        \tkzDefTriangleCenter[circum](A,B,C)
+        \tkzGetPoint{G}
+        \tkzLabelPoints[below](G)
+        \tkzDrawPoints(G)
+
+        \tkzDrawSegment(C,G)
+        \tkzLabelSegments[above](C,G){$R$}
+
+        \tkzDrawCircle(G,A)
+
+    \end{tikzpicture}
+    \caption{Çevrel Çember ve Üçgen}
+    \label{fig:circumtrig}
+\end{figure}
+
+\ref{fig:circumtrig} Üçgen figüründe de görülebileceği gibi G çevrel çemberin merkezi ise,
+\begin{equation}
+    \text{Alan(ABC)} = \frac{abc}{4R}
+\end{equation}
+geçerlidir.

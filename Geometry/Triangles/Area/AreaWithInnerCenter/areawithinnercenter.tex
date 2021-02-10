@@ -1,0 +1,39 @@
+\subsubsection{İç Teğet Çember ile Alan}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(-4,-1){B}
+        \tkzDefPoint(0,4){A}
+        \tkzDefPoint(2,0){C}
+        \tkzLabelPoints[below left](B)
+        \tkzLabelPoints[right](C)
+        \tkzLabelPoints[above](A)
+        \tkzDrawPolygon(A,B,C)
+        \tkzLabelSegment[above left](A,B){c}
+        \tkzLabelSegment(C,B){a}
+        \tkzLabelSegment(A,C){b}
+
+        \tkzDefTriangleCenter[in](A,B,C)
+        \tkzGetPoint{I}
+        \tkzLabelPoints[above right](I)
+        \tkzDrawPoints(I)
+
+        \tkzDefPointBy[projection=onto A--B](I) \tkzGetPoint{K}
+        \tkzDrawSegment(K,I)
+        \tkzLabelSegments[above](K,I){$r$}
+
+        \tkzDrawCircle(I,K)
+
+    \end{tikzpicture}
+    \caption{İç Teğet Çember ve Üçgen}
+    \label{fig:innertrig}
+\end{figure}
+
+
+\ref{fig:innertrig} Üçgen figüründe de görülebileceği gibi I iç teğet çemberin merkezi ise,
+\begin{equation}
+    \text{Alan(ABC)} = ur \qquad \qquad \parbox{4cm}{\footnotesize$\begin{aligned}
+        u = \frac{a+b+c}{2}
+    \end{aligned}$}
+\end{equation}
+geçerlidir.

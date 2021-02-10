@@ -2,9 +2,11 @@
 \usepackage[top=3cm, bottom=3cm, left=2cm, right=2cm]{geometry}
 
 \usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-\lhead{\thepage}
+\newcommand{\refresh}{
+    \pagestyle{fancy}
+    \fancyhf{}
+    \lhead{\thepage}
+}
 
 \usepackage[turkish]{babel}
 
@@ -32,6 +34,7 @@
     \newtheorem*{theorem}{Teori}
     \theoremstyle{definition}
     \newtheorem*{definition}{Tanım}
+    \refresh
     \maketitle
     \tableofcontents
     \import{./Geometry/}{Geometry.tex}

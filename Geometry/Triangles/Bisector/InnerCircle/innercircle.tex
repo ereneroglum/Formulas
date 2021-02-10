@@ -1,0 +1,44 @@
+\subsubsection{İç Teğet Çember}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(-4,-1){B}
+        \tkzDefPoint(0,4){A}
+        \tkzDefPoint(2,0){C}
+        \tkzLabelPoints[below left](B)
+        \tkzLabelPoints[right](C)
+        \tkzLabelPoints[above](A)
+        \tkzDrawPolygon(A,B,C)
+        \tkzLabelSegment[above left](A,B){c}
+        \tkzLabelSegment(C,B){a}
+        \tkzLabelSegment(A,C){b}
+
+        \tkzDefTriangleCenter[in](A,B,C)
+        \tkzGetPoint{I}
+        \tkzLabelPoints[above right](I)
+        \tkzDrawPoints(I)
+
+        \tkzDefPointBy[projection=onto A--B](I) \tkzGetPoint{K}
+
+        \tkzDrawCircle(I,K)
+
+        \tkzMarkAngle[mark=none, arc=ll](I,B,A)
+        \tkzMarkAngle[mark=none, arc=ll](C,B,I)
+
+        \tkzMarkAngle(B,A,I)
+        \tkzMarkAngle(I,A,C)
+
+        \tkzMarkAngle[mark=none, size=0.4cm](A,C,I)
+        \tkzMarkAngle[mark=none, size=0.4cm](I,C,B)
+        \tkzLabelAngles[pos=0.25](A,C,I I,C,B){$\cdot$}
+
+        \tkzDrawSegments(A,I B,I C,I)
+
+    \end{tikzpicture}
+    \caption{İç Teğet Çember}
+    \label{fig:innercircle}
+\end{figure}
+
+\begin{equation}
+    \text{\ref{fig:innercircle} Üçgen figüründe de görülebileceği gibi iç açıortaylar iç teğet çemberin merkezinde kesişir.}
+\end{equation}
