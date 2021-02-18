@@ -6,7 +6,7 @@
         \tkzDefPoint(6,0){C}
         \tkzDefMidPoint(A,C) \tkzGetPoint{D}
         \tkzDefLine[perpendicular=through D](A,C) \tkzGetPoint{K}
-        \tkzDefPointWith[linear,K=0.8](D,K) \tkzGetPoint{B}
+        \tkzDefPointWith[linear,K=1.2](D,K) \tkzGetPoint{B}
 
         \tkzDrawSegments(A,B B,C A,C)
 
@@ -34,11 +34,14 @@
         
         \tkzMarkSegments[mark=||](B,A B,C)
 
-        \tkzDrawSegment(B,D)
-        \tkzMarkRightAngle(B,D,C)
-        \tkzLabelAngle[pos=-0.2](B,D,C){$\cdot$}
+        \tkzDefLine[perpendicular=through C](A,B) \tkzGetPoint{J}
+        \tkzInterLL(C,J)(A,B) \tkzGetPoint{L}
 
-        \tkzLabelSegment(B,D){$h$}
+        \tkzDrawSegment(C,L)
+        \tkzMarkRightAngle(C,L,B)
+        \tkzLabelAngle[pos=0.2](C,L,B){$\cdot$}
+
+        \tkzLabelSegment[above](C,L){$h$}
 
 
     \end{tikzpicture}

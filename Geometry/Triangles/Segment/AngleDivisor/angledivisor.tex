@@ -31,3 +31,51 @@
     \end{aligned}
 \end{equation}
 geçerlidir.
+
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(40:5){H}
+        \tkzDefPoint(40:4){A}
+        \tkzDefPoint(0,0){B}
+        \tkzDefPoint(3.5,0){C}
+        \tkzDefLine[bisector](C,A,H)
+        \tkzGetPoint{K}
+        \tkzInterLL(B,C)(A,K)
+        \tkzGetPoint{N}
+
+        \tkzDrawPoints(A,B,C,N)
+        \tkzDrawPolygon(A,B,C)
+        \tkzDrawSegment(A,H)
+        \tkzDrawSegment(A,N)
+        \tkzDrawSegment(B,N)
+
+        \tkzMarkAngle[size=0.5, mark=none](C,A,N)
+        \tkzMarkAngle[size=0.5, mark=none](N,A,H)
+        
+        \tkzLabelAngle[pos=0.8](N,A,H){$\theta _1$}
+        \tkzLabelAngle[pos=0.8](C,A,N){$\theta _2$}
+
+        \tkzLabelPoints[below](C,N)
+        \tkzLabelPoints[above left](A)
+        \tkzLabelPoints[below left](B)
+
+        \tkzLabelSegment[left](A,B){c}
+        \tkzLabelSegment[left](A,C){b}
+
+        \tkzLabelSegment[below](B,C){k}
+        \tkzLabelSegment[below](C,N){p}
+
+
+    \end{tikzpicture}
+    \caption{Üçgen}
+    \label{fig:outeranglediv}
+\end{figure}
+
+\ref{fig:outeranglediv} Üçgen figüründe de görülebileceği gibi, 
+\begin{equation}
+    \begin{aligned}
+    \frac{p}{p+k} \sin(\theta _1) =\frac{b}{c} \sin(\theta _2) \\ 
+    \end{aligned}
+\end{equation}
+geçerlidir.

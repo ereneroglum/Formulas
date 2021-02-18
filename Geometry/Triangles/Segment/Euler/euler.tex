@@ -1,0 +1,47 @@
+\subsubsection{Euler Teoremi}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(75:7){A}
+        \tkzDefPoint(0,1){B}
+        \tkzDefPoint(7,0){C}
+
+        \tkzDrawPolygon(A,B,C)
+
+        \tkzLabelPoints[above](A)
+        \tkzLabelPoints[left](B)
+        \tkzLabelPoints[right](C)
+
+        \tkzDefTriangleCenter[circum](A,B,C)
+        \tkzGetPoint{O}
+        \tkzDefTriangleCenter[in](A,B,C)
+        \tkzGetPoint{I}
+
+        \tkzDefPointBy[projection=onto A--B](I) \tkzGetPoint{K}
+        \tkzDrawCircle(I,K)
+        \tkzDrawCircle(O,A)
+
+        \tkzDrawPoints(A,B,C,I,O)
+
+        \tkzLabelPoints[below left](I)
+        \tkzLabelPoints[above right](O)
+
+        \tkzDrawSegments(I,K O,C)
+        \tkzLabelSegments[above](I,K){$r$}
+        \tkzLabelSegments[right](O,C){$R$}
+
+        \tkzDrawSegments[color=red](I,O)
+        \tkzLabelSegments[above](O,I){$d$}
+
+    \end{tikzpicture}
+    \caption{İç  Teğet Çemberi ve Çevre Çemberi Çizilmiş Üçgen}
+    \label{fig:eulertrig}
+\end{figure}
+
+\ref{fig:eulertrig} Üçgen figüründe de görülebileceği gibi I iç teğet çemberin merkezi ve O çevrel çemberin merkezi ise,
+\begin{equation}
+    \begin{aligned}
+    d^2 = R(R-2r) \\
+    \end{aligned}
+\end{equation}
+geçerlidir.
