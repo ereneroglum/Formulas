@@ -1,0 +1,34 @@
+\subsubsection{Parelelleri Kesen Doğru İçin Benzerlik}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(0,0){A}
+        \tkzDefPoint(60:5){B}
+        \tkzDefPoint(4,0){C}
+        \tkzDefPointWith[colinear=at C](A,B) \tkzGetPoint{D}
+        \tkzDefPoint(7,0){E}
+        \tkzDefPointWith[colinear=at E](A,B) \tkzGetPoint{F}
+        \tkzInterLL(B,E)(F,A)
+        \tkzGetPoint{G}
+        \begin{scope}[decoration={
+            markings,
+            mark=at position 0.5 with {\arrow{>}}}
+            ] 
+            \tkzDrawSegments[postaction=decorate](A,B C,G E,F)
+        \end{scope}
+        \tkzDrawSegments(B,E F,A A,E)
+        \tkzDrawPoints(A,B,C,G,E,F)
+
+        \tkzLabelSegments[left=0.3cm](A,B){$a$}
+        \tkzLabelSegments[left=0.2cm](C,G){$r$}
+        \tkzLabelSegments[left=0.3cm](E,F){$b$}
+    \end{tikzpicture}
+    \caption{Parelelleri Kesen Doğru}
+    \label{fig:lineeintersecparelels}
+\end{figure}
+
+\ref{fig:lineeintersecparelels} figüründe de görülebileceği gibi, 
+\begin{equation}
+    \frac{1}{r} = \frac{1}{a} + \frac{1}{b}
+\end{equation}
+geçerlidir.

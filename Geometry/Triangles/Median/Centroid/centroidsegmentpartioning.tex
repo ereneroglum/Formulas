@@ -10,7 +10,6 @@
         \tkzDefTriangleCenter[centroid](A,B,C)
         \tkzGetPoint{G}
 
-
         \tkzDefMidPoint(B,C)
         \tkzGetPoint{L}
 
@@ -19,7 +18,6 @@
 
         \tkzDefMidPoint(A,C)
         \tkzGetPoint{M}
-
 
         \tkzDrawPoints(A,B,C,G)
         \tkzDrawSegments(A,L B,M C,K)
@@ -39,12 +37,14 @@
         \tkzLabelSegments[above](B,G){$2b$}
         \tkzLabelSegments[above](G,M){$b$}
 
-
     \end{tikzpicture}
     \caption{Üçgen}
     \label{fig:centroidsegmentation}
 \end{figure}
 
 \begin{equation}
-    \text{\ref{fig:centroidsegmentation} Üçgen figüründe de görülebileceği gibi G ağırlık merkezi ise G noktası kenarortayları} \frac{2}{1} \text{oranda böler.}
+    \begin{aligned}
+        \text{\ref{fig:centroidsegmentation} Üçgen figüründe de görülebileceği gibi} \\
+        \text{G ağırlık merkezi ise G noktası kenarortayları } \frac{2}{1} \text{ oranda böler.}
+    \end{aligned}
 \end{equation}
