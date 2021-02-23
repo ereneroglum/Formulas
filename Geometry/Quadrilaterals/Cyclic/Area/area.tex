@@ -1,0 +1,43 @@
+\subsubsection{Kirişler Dörgeninin Alanı}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(4,4){I}
+        \tkzDefPoint(0,4){P}
+
+        \tkzDrawCircle(I,P)
+
+        \tkzDefPoint(4,8){K}
+        \tkzDefPoint(5,7.6){L}
+        \tkzDefPoint(1,3){M}
+        \tkzDefPoint(6,2){N}
+
+        \tkzInterLC(K,L)(I,P) \tkzGetPoints{A}{B}
+        \tkzInterLC(M,N)(I,P) \tkzGetPoints{C}{D}
+
+        \tkzDrawPoints(A,B,C,D)
+
+        \tkzDrawPolygon(A,B,C,D)
+
+        \tkzLabelSegment[left](A,D){$a$}
+        \tkzLabelSegment[below](A,B){$b$}
+        \tkzLabelSegment[right](B,C){$c$}
+        \tkzLabelSegment[below](C,D){$d$}
+
+        \tkzLabelPoints[above](A)
+        \tkzLabelPoints[above right](B)
+        \tkzLabelPoints[below right](C)
+        \tkzLabelPoints[below left](D)
+
+    \end{tikzpicture}
+    \caption{Kirişler Dörgeni}
+    \label{fig:cyclicforarea}
+\end{figure}
+
+\ref{fig:cyclicforarea} Dörtgen figüründe de görülebileceği gibi, 
+\begin{equation}
+    Alan(ABCD) = \sqrt{(u-a)(u-b)(u-c)(u-d)} \qquad \qquad \parbox{4cm}{\footnotesize$\begin{aligned}
+        u = \frac{a+b+c+d}{2}
+    \end{aligned}$}
+\end{equation}
+geçerlidir.

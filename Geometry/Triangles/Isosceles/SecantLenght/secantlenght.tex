@@ -1,0 +1,37 @@
+\subsubsection{İkizkenar Üçgende Kesenin Uzunluğu}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoint(-2.5,0){B}
+        \tkzDefPoint(90:4){A}
+        \tkzDefPoint(2.5,0){C}
+        \tkzDrawPolygon(B,A,C)
+        \tkzDefPointOnLine[pos=0.3](B,C) \tkzGetPoint{K}
+        \tkzDrawSegment(A,K)
+        
+        \tkzLabelPoints(C)
+        \tkzLabelPoints[below](K)
+        \tkzLabelPoints[above](A)
+        \tkzLabelPoints[below left](B)
+        \tkzLabelSegments[below](B,K){$m$}
+        \tkzLabelSegments[below](K,C){$n$}
+        
+        \tkzMarkSegment[mark=||](B,A)
+        \tkzMarkSegment[mark=||](C,A)
+
+        \tkzLabelSegments[left=0.2cm](B,A){$a$}
+        \tkzLabelSegments[right=0.2cm](C,A){$a$}
+
+        \tkzLabelSegments[right](A,K){$d$}
+
+        \tkzDrawPoints(A,B,C,K)
+    \end{tikzpicture}
+    \caption{İkizkenar Üçgen}
+    \label{fig:isosceleswsecant}
+\end{figure}
+
+\ref{fig:isosceleswsecant} Üçgen figüründe de görülebileceği gibi,
+\begin{equation} 
+    d^2 = a^2 - mn
+\end{equation}
+geçerlidir.
