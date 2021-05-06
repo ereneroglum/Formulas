@@ -1,0 +1,43 @@
+\subsubsection{Yamukta Tabana Parelel Çekilen Kenar}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+      \tkzDefPoint(0,0){A}
+      \tkzDefPoint(7,0){B}
+      \tkzDefPoint(2,5){C}
+      \tkzDefPoint(5,5){D}
+
+      \tkzDrawPolygon(A,C,D,B)
+
+      \tkzDefPointOnLine[pos=0.4](A,C) \tkzGetPoint{K}
+      \tkzDefPointOnLine[pos=0.4](B,D) \tkzGetPoint{L}
+
+      \tkzDrawSegment(K,L)
+      
+      \tkzLabelSegments[above](C,D){$a$}
+      \tkzLabelSegments[below](A,B){$b$}
+      \tkzLabelSegments[above](K,L){$x$}
+      
+      \tkzLabelSegments[left](C,K){$c$}
+      \tkzLabelSegments[left](A,K){$d$}
+
+      \tkzDefPoint(3.5,4){S}
+      \tkzDefPoint(3.5,1.5){W}
+
+      \tkzLabelPoint(S){$S_1$}
+      \tkzLabelPoint(W){$S_2$}
+      \tkzDrawPoints(A,C,B,D,K,L)
+      
+    \end{tikzpicture}
+    \caption{Yamuk}
+    \label{fig:trapezoidparellel}
+\end{figure}
+
+\ref{fig:trapezoidparellel} Yamuk figüründe de görülebileceği gibi, 
+\begin{equation}
+  \begin{aligned}
+    \frac{c}{d} = \frac{a-x}{x-b} \\
+    \frac{a^2 - x^2}{x^2-b^2} = \frac{S_1}{S_2}
+  \end{aligned}
+\end{equation}
+geçerlidir.
