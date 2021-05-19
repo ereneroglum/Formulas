@@ -1,0 +1,53 @@
+\subsubsection{Yayı Gören Çevre Açı}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+      \tkzDefPoint(0,4){I}
+      \tkzDefPoint(0,1){O}
+      \tkzDrawCircle[through](I,O)
+      \tkzDefPoint(-4, 2){A}
+      \tkzDefPoint(4,3.5){B}
+      \tkzDefPoint(-4,6.5){C}
+      \tkzDefPoint(4,6.5){D}
+      \tkzInterLC(A,B)(I,O) \tkzGetPoints{E}{F}
+      \tkzInterLC(C,D)(I,O) \tkzGetPoints{K}{L}
+      \tkzDrawSegments(E,K E,L F,K F,L)
+      \tkzMarkAngles[mark=none, size=0.5](F,K,E F,L,E)
+      \tkzLabelAngle[pos=0.7](F,K,E){$\alpha$}
+      \tkzLabelAngle[pos=0.7](F,L,E){$\alpha$}
+      \tkzInterLL(K,E)(F,L) \tkzGetPoint{Q}
+      \tkzDefMidPoint(F,E) \tkzGetPoint{X}
+      \tkzInterLC(Q,X)(I,O) \tkzGetPoints{Y}{Z}
+      \tkzDrawPoints(E,F,K,L)
+      \node [below] at (Z) {$2 \alpha$};
+    \end{tikzpicture}
+    \caption{Çember}
+    \label{fig:anglesubtendedarccircle}
+\end{figure}
+
+\subsubsection{Yayı Gören Merkez Açı}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+      \tkzDefPoint(0,4){I}
+      \tkzDefPoint(0,1){O}
+      \tkzDrawCircle[through](I,O)
+      \tkzDefPoint(-4, 2){A}
+      \tkzDefPoint(4,3.5){B}
+      \tkzDefPoint(-4,6.5){C}
+      \tkzDefPoint(4,6.5){D}
+      \tkzInterLC(A,B)(I,O) \tkzGetPoints{E}{F}
+      \tkzInterLC(C,D)(I,O) \tkzGetPoints{K}{L}
+      \tkzDrawSegments(E,K E,I F,K F,I)
+      \tkzMarkAngles[mark=none, size=0.5](F,K,E F,I,E)
+      \tkzLabelAngle[pos=0.7](F,K,E){$\alpha$}
+      \tkzLabelAngle[pos=0.7](F,I,E){$2 \alpha$}
+      \tkzInterLL(K,E)(F,L) \tkzGetPoint{Q}
+      \tkzDefMidPoint(F,E) \tkzGetPoint{X}
+      \tkzInterLC(Q,X)(I,O) \tkzGetPoints{Y}{Z}
+      \tkzDrawPoints(K,E,F,I)
+      \node [below] at (Z) {$2 \alpha$};
+    \end{tikzpicture}
+    \caption{Çember}
+    \label{fig:anglesubtendedarccircle2}
+\end{figure}
