@@ -1,0 +1,66 @@
+\section{Trigonometrik Eşitlikler}
+
+\subsection*{Temel Eşitlikler}
+\[ \sin(-\theta) = -\sin(\theta) \]
+\[ \cos(-\theta) = \cos(\theta) \]
+\[ \sin^2(\theta) + \cos^2(\theta) = 1 \]
+
+\[
+\begin{array}{rclrcl}
+\tan(\theta) &=& \sin(\theta)/\cos(\theta)\quad & \quad
+\cot(\theta) &=& \cos(\theta)/\sin(\theta) = 1/\tan(\theta)\\
+\sec(\theta) &=& 1/\cos(\theta)\quad & \quad
+\csc(\theta) &=& 1/\sin(\theta)
+\end{array}
+\]
+
+\begin{eqnarray*}
+\tan^2(\theta) + 1 &=& \sec^2(\theta)\\
+1 + \cot^2(\theta) &=& \csc^2(\theta)
+\end{eqnarray*}
+
+\subsection*{Toplam Fark Formülleri}
+
+\begin{eqnarray*}
+\sin(\alpha+\beta) &=& \sin(\alpha)\cos(\beta) + \cos(\alpha)\sin(\beta) \\
+\sin(\alpha-\beta) &=& \sin(\alpha)\cos(\beta) - \cos(\alpha)\sin(\beta) \\
+\cos(\alpha+\beta) &=& \cos(\alpha)\cos(\beta) - \sin(\alpha)\sin(\beta) \\
+\cos(\alpha-\beta) &=& \cos(\alpha)\cos(\beta) + \sin(\alpha)\sin(\beta) \\
+\tan(\alpha+\beta) &=& \frac{\tan(\alpha) + \tan(\beta)}{1 - \tan(\alpha)\tan(\beta)} \\
+\tan(\alpha-\beta) &=& \frac{\tan(\alpha) - \tan(\beta)}{1 + \tan(\alpha)\tan(\beta)}
+\end{eqnarray*}
+
+\begin{eqnarray*}
+\sin(2\alpha) &=&  2\sin(\alpha)\cos(\alpha) \\
+\cos(2\alpha) &=& \cos^2(\alpha) - \sin^2(\alpha) \\
+\tan(2\alpha) &=& \frac{2\tan(\alpha)}{1-\tan^2(\alpha)}
+\end{eqnarray*}
+
+\begin{eqnarray*}
+\cos(2\alpha) &=& 1 - 2\sin^2(\alpha) \\
+\cos(2\alpha) &=& 2\cos^2(\alpha) - 1
+\end{eqnarray*}
+
+\begin{eqnarray*}
+\sin^2(\alpha) &=& \frac{1}{2}(1 - \cos(2\alpha)) \\
+\cos^2(\alpha) &=& \frac{1}{2}(1 + \cos(2\alpha))
+\end{eqnarray*}
+
+\subsection*{Türev ve İntegraller}
+\[
+\begin{array}{rclrcl}
+\frac{d}{dx}\sin(x) &=& \cos(x)\quad &\quad
+\frac{d}{dx}\sec(x) &=& \sec(x)\tan(x)\\
+\frac{d}{dx}\cos(x) &=& -\sin(x)\quad &\quad
+\frac{d}{dx}\csc(x) &=& -\csc(x)\cot(x) \\
+\frac{d}{dx}\tan(x) &=& \sec^2(x)\quad &\quad
+\frac{d}{dx}\cot(x) &=& -\csc^2(x) \\
+\\
+\int\sin(x)\,dx &=& -\cos(x)+C\quad &\quad
+\int\sec(x)\,dx &=& \ln|\sec(x)+\tan(x)|+C\\
+\int\cos(x)\,dx &=& \sin(x)+C\quad &\quad
+\int\csc(x)\,dx &=& -\ln|\csc(x)+\cot(x)|+C \\
+\int\tan(x)\,dx &=& \ln|\sec(x)|+C\quad &\quad
+\int\cot(x)\,dx &=& -\ln|\csc(x)|+C
+\end{array}
+\]
